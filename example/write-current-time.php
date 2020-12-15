@@ -4,7 +4,9 @@ date_default_timezone_set("Asia/Calcutta");
 
 $file = dirname(__FILE__).'/current-time.txt';
 
-$content = "Updated using PHP ".getmypid()." ".PHP_EOL;
+$key = $argv[1];
+
+$content = "Updated using PHP PID: ".getmypid()." | Key: ".$key.PHP_EOL;
 
 while(true){
   $date = new DateTime();
